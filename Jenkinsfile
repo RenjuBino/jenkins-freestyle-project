@@ -20,6 +20,7 @@ pipeline {
 
                sh '''
                 echo "Executing hello stage"
+                echo "Testing webhook and git commit"
                 '''
             }
 
