@@ -2,30 +2,27 @@ pipeline {
 
     agent any
 
-    stages {
+      stages{
 
-        stage('run.sh') {
+            stage('Make Directory'){
 
-            steps {
+                steps{
 
-               sh '''
-                sh run.sh
-                '''
+                    sh "mkdir ~/jenkins-tutorial-test"
+
+                }
+
+            }
+
+            stage('Make Files'){
+
+                steps{
+
+                    sh "touch ~/jenkins-tutorial-test/file1 ~/jenkins-tutorial-test/file2"
+
+                }
+
             }
 
         }
-	    stage('Hello') {
-
-            steps {
-
-               sh '''
-                echo "Executing hello stage"
-                echo "Testing webhook and git commit"
-                '''
-            }
-
-        }
-
-    }
-
 }
