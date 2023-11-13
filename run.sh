@@ -1,2 +1,2 @@
 echo "Hello freestyle project"
-echo "Test"
+echo "Test1"
